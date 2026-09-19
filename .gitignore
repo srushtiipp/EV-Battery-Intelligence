@@ -1,0 +1,18 @@
+# Python virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment variables / secrets
+.env
+
+# Node
+node_modules/
+
+# Large raw datasets
+data/raw/
+
+# Generated processed data
+data/processed/
