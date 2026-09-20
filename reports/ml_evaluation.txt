@@ -1,0 +1,60 @@
+EV Battery Intelligence - ML Evaluation Report
+
+Dataset
+-------
+Source: Severson battery dataset
+Number of batteries: 46
+Number of engineered features: 8
+
+Features
+--------
+1. capacity_mean_100
+2. capacity_at_100
+3. capacity_min_100
+4. ir_mean_100
+5. temp_mean_100
+6. temp_max_100
+7. charge_time_mean_100
+8. capacity_drop
+
+Target
+------
+cycle_life
+
+Train/Test Split
+----------------
+Training batteries: 36
+Testing batteries: 10
+Random state: 42
+Test size: 20%
+
+Model
+-----
+Linear Regression
+
+Evaluation Results
+------------------
+MAE: 119.34 cycles
+RMSE: 136.50 cycles
+R2: 0.571
+
+Saved Model
+-----------
+models/cycle_life_linear_model.pkl
+
+Prediction Output
+-----------------
+data/processed/predictions.csv
+
+Important Limitation
+--------------------
+Only 46 batteries are available in this dataset.
+The test set contains only 10 batteries, so evaluation
+metrics may vary with a different train/test split.
+
+Random Forest Note
+------------------
+Random Forest was attempted, but the Windows environment
+blocked a required compiled DLL with an Application Control
+policy. Linear Regression was therefore used as the
+working baseline model.
